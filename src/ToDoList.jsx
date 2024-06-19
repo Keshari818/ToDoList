@@ -17,10 +17,7 @@ function ToDoList() {
     }
 
     function deleteTask(index) {
-        // const updatedTasks = [...tasks];
-        // updatedTasks.splice(index, 1);
-        // setTasks(updatedTasks);
-
+        
         const updatedTasks = tasks.filter((_, i) => i !=index)
         setTasks(updatedTasks);
     }
@@ -28,11 +25,7 @@ function ToDoList() {
     function moveTaskUp(index) {
         if (index > 0) {
             const updatedTasks = [...tasks];
-            // const temp = updatedTasks[index];
-            // updatedTasks[index] = updatedTasks[index - 1];
-            // updatedTasks[index - 1] = temp;
-            // setTasks(updatedTasks);
-
+            
             [updatedTasks[index], updatedTasks[index - 1]]=[updatedTasks[index - 1], updatedTasks[index]];
             setTasks(updatedTasks);
         }
@@ -41,10 +34,7 @@ function ToDoList() {
     function moveTaskDown(index) {
         if (index < tasks.length - 1) {
             const updatedTasks = [...tasks];
-            // const temp = updatedTasks[index];
-            // updatedTasks[index] = updatedTasks[index + 1];
-            // updatedTasks[index + 1] = temp;
-            // setTasks(updatedTasks);
+           
 
             [updatedTasks[index], updatedTasks[index - 1]]=[updatedTasks[index - 1], updatedTasks[index]];
             setTasks(updatedTasks);
